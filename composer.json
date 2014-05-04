@@ -1,0 +1,21 @@
+{
+  "name": "xtfer/supermodel",
+  "description": "Define your models using a common interface",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Christopher Skene",
+      "email": "chris@xtfer.com"
+    }
+  ],
+  "require-dev": {
+    "raulfraile/ladybug": "v1.*",
+    "phpunit/phpunit": "v4.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "SuperModel": "src"
+    }
+  }
+}
