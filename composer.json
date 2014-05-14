@@ -2,7 +2,7 @@
   "name": "xtfer/supermodel",
   "description": "Define your models using a common interface",
   "minimum-stability": "dev",
-  "license": "proprietary",
+  "license": "GPLv3",
   "authors": [
     {
       "name": "Christopher Skene",
