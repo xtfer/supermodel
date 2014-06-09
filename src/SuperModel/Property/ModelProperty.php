@@ -605,9 +605,13 @@ class ModelProperty implements ModelPropertyInterface {
    *
    * @param bool $value
    *   (Optional) TRUE if the value is unique. FALSE if not. Defaults to TRUE.
+   *
+   * @return ModelPropertyInterface
+   *   This class, for chaining.
    */
   public function setUnique($value = TRUE) {
-    $this->options['unique'] = $value;
+
+    return $this->setOption('unique', $value);
   }
 
   /**

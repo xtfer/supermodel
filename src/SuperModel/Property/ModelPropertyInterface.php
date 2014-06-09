@@ -324,6 +324,21 @@ interface ModelPropertyInterface {
   public function setType($type);
 
   /**
+   * Set whether this property should be unique.
+   *
+   * SuperModel cannot enforce uniqueness for a property, but this can be used
+   * by objects handling SuperModels. Calling this method without any arguments
+   * will flag the property as unique.
+   *
+   * @param bool $value
+   *   (Optional) TRUE if the value is unique. FALSE if not. Defaults to TRUE.
+   *
+   * @return ModelPropertyInterface
+   *   This class, for chaining.
+   */
+  public function setUnique($value = TRUE);
+
+  /**
    * Set the update strategy for an item.
    *
    * @param int $strategy
