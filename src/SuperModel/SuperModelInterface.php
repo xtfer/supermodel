@@ -19,6 +19,14 @@ use SuperModel\Property\ModelPropertyInterface;
 interface SuperModelInterface {
 
   /**
+   * Constructor.
+   *
+   * @param array $data
+   *   (Optional) Any data to set.
+   */
+  public function __construct($data = array());
+
+  /**
    * Add a new property.
    *
    * @param string $name

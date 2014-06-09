@@ -64,10 +64,19 @@ abstract class SuperModel implements SuperModelInterface, ModelInterface, Formab
 
   /**
    * Constructor.
+   *
+   * @param array $data
+   *   (Optional) Any data to set.
    */
-  public function __construct() {
+  public function __construct($data = array()) {
 
     $this->getStructure();
+
+    if (!empty($data)) {
+      foreach ($data as $key => $value) {
+        $this->setValue($key, $value);
+      }
+    }
   }
 
   /**
