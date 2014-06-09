@@ -625,7 +625,7 @@ class ModelProperty implements ModelPropertyInterface {
    */
   public function setUpdateStrategy($strategy = UpdateTypes::UPDATE_MUTABLE) {
 
-    $this->setOption('update_strategy', $strategy);
+    return $this->setOption('update_strategy', $strategy);
   }
 
   /**
