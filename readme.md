@@ -6,4 +6,6 @@ SuperModel makes no assumptions about your data source, storage, output or other
 
 ## Usage
 
-SuperModel assumes you will create a new Class to define your model that extends the SuperModel
+SuperModel assumes you will create a new Class to define your model that extends the SuperModel.
+
+While SuperModel allows you to define things like whether a property is required, or changeable, it does not validate whether these properties are changed.
