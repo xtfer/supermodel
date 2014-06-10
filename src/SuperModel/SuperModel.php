@@ -319,6 +319,9 @@ abstract class SuperModel implements SuperModelInterface, ModelInterface, Formab
   /**
    * Set the value for Data.
    *
+   * If a method exists called "setValue{KeyName}", then that will be called
+   * to set the value. If not, the value is simply set directly.
+   *
    * @param string $key
    *   The property to set.
    * @param mixed $data
@@ -329,7 +332,12 @@ abstract class SuperModel implements SuperModelInterface, ModelInterface, Formab
    */
   public function setValue($key, $data) {
 
-    $this->data[$key] = $data;
+    if (method_exists($this, 'setValue' . ucfirst($key))) {
+      $this->{'setValue' . ucfirst($key)}($data);
+    }
+    else {
+      $this->data[$key] = $data;
+    }
 
     return $this;
   }
